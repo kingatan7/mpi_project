@@ -48,7 +48,7 @@ else:
     # Try to compile before running
     with open(os.devnull, 'wb') as devnull:
         subprocess.call(
-            ['cd ./{0}/code && make'.format(programs[program_to_run][0])],
+            [ 'make'],
             stdout=devnull, stderr=subprocess.STDOUT, shell=True)
 
     mpirun = os.environ.get('MPIRUN', 'mpirun')
